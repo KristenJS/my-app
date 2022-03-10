@@ -1,0 +1,30 @@
+.mockFriend {
+  margin-bottom: 20px;
+  height: 40px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+
+  .mockFriend__block {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+    h4 {
+      margin: 0;
+    }
+
+    .mockFriend__btn {
+      font-size: 0.7rem;
+      background-color: rgb(207, 167, 144);
+      border: none;
+      border-radius: 4px;
+      box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.25);
+      padding: 0px 15px;
+      color: white;
+    }
+    .mockFriend__btn:hover {
+      background-color: rgb(189, 129, 95);
+      cursor: pointer;
+    }
+  }
+
+}

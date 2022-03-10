@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+<div class='container'>
+
+  <p *ngIf='!items.length'>
+    You have not added any games yet.</p> 
+    <div class='gameCard'>
+      <div *ngFor="let item of items" >
+        <div class='gameCard__block'>
+          <div class='gameCard__1'>
+            <p>{{item.title}}</p><br><br><br><br>
+          </div>
+          <div class='gameCard__2'>
+            <p>Hell’s armies have invaded Earth. Become the Slayer in an epic single-player campaign to conquer demons across dimensions and stop the final destruction of humanity. The only thing they fear... is you.</p>
+            <button class='gameCard__btn1' >Download</button><button class='gameCard__btn2'>Share</button>
+          </div>
+        </div>
+      </div>  
+    </div>
+
+</div>

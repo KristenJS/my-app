@@ -1,0 +1,13 @@
+
+<div *ngIf='game' class='gameCard'>
+  <div  class='gameCard__block'>
+    <div class='gameCard__1'>
+      <p>{{game.title}}</p><br><br><br><br>
+      <p>{{game.price}} UAH</p>
+    </div>
+    <div class='gameCard__2'>
+      <p>Hell’s armies have invaded Earth. Become the Slayer in an epic single-player campaign to conquer demons across dimensions and stop the final destruction of humanity. The only thing they fear... is you.</p>
+      <button class='gameCard__btn' (click)='addGameToLib(game)'>Add to Library</button>
+    </div>
+  </div>
+</div>

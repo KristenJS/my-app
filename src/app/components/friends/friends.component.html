@@ -1,0 +1,22 @@
+<app-navbar></app-navbar>
+<div class='block'>
+    <h2>Friends</h2>
+    <form (onSubmit)='$event.preventDefault()'>
+        <label for='searchInput'>Search friends </label>
+        <input #searchBox type='text' placeholder='Search Friends' id='searchInput'>
+        <button class='block__btn' (click)='searchFriend($event, searchBox.value)'>Search</button>
+    </form>
+    <br><br>
+
+    <div *ngIf="!searchQuery">
+        <app-friend-item *ngFor='let friend of myFriends' [friend]='friend' (onRemoveFriend)='removeFriend(friend)'>
+        </app-friend-item>
+    </div>
+
+    <div class='addFriend' *ngIf="searchQuery">
+        <div class='addFriend__block' *ngFor="let per of allPeople | searchFilter: searchQuery">
+            <h4>{{per.userName}}</h4>
+            <button class='addFriend__btn' (click)='addFriend(per, searchBox)'>Add Friend</button>
+        </div>
+    </div>
+</div>

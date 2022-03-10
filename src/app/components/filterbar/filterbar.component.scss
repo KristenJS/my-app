@@ -1,0 +1,15 @@
+.filterBlock {
+  width: 280px;
+  input {
+    width: 180px;
+  }
+}
+
+@media (max-width: 992px) {
+  .filterBlock {
+    width: 250px;
+    input {
+      width: 150px;
+    }
+  }
+}

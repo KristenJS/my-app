@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+<div class='container'>
+  <h2>Games</h2>
+  <form (onSubmit)='$event.preventDefault()' class='block'>
+    <label for='searchInput'>Search games </label>
+    <input #searchBox2 type='text' placeholder='Search games' id='searchInput'>
+    <button class='block__btn' (click)='searchGame($event, searchBox2.value)'>Search</button><br><br>
+    <h3>Featured Games</h3>
+  </form>
+
+  <div class='container__flex'>
+    <div *ngIf='isDefaultGamesVisible' class='gameCard'>
+      <app-cards *ngFor='let game of games' [game]='game'></app-cards>
+    </div>
+    <div *ngIf='!isDefaultGamesVisible && !searchQuery2' class='gameCard'>
+      <app-cards *ngFor='let game of filteredGames' [game]='game'></app-cards>
+    </div>
+    <div *ngIf="searchQuery2" class='gameCard'>
+      <div *ngFor="let game of games | searchFilter2: searchQuery2">
+        <div class='gameCard__block'>
+          <div class='gameCard__1'>
+            <p>{{game.title}}</p><br><br><br><br>
+            <p>{{game.price}} UAH</p>
+          </div>
+          <div class='gameCard__2'>
+            <p>Hell’s armies have invaded Earth. Become the Slayer in an epic single-player campaign to conquer demons
+              across dimensions and stop the final destruction of humanity. The only thing they fear... is you.</p>
+            <button class='gameCard__btn' (click)='addGameToLib(game)'>Add to Library</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-filterbar (change)='onPriceFilter($event)'></app-filterbar>
+  </div>
+</div>
