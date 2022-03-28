@@ -1,6 +1,7 @@
-{
-  "friends": [
-    {
+import {Friend} from './Friend'
+
+export const AllFRIENDS: Friend[]= [
+  {
       "id": 1,
       "userName": "Nice"
     },
@@ -45,4 +46,3 @@
       "userName": "T"
     }
   ]
-}
