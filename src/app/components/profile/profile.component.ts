@@ -20,6 +20,6 @@ export class ProfileComponent implements OnInit {
   onSubmit() {
     localStorage.setItem('user',JSON.stringify(this.profileForm.value))
     this.profileForm.reset()
+    alert('The data will be saved in Local Storage!')
   }
-
 }

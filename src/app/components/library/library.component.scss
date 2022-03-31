@@ -1,7 +1,7 @@
 
 .container {
-  width: 1200px;
-  margin: 20px auto;
+  max-width: 100%;
+  margin: 20px 100px 0 100px;
   padding: 40px;
   background: #FFFFFF;
   .gameCard {
@@ -56,5 +56,52 @@
         }
       }
     } 
+  }
+}
+
+@media (max-width: 1300px) {
+  .container {
+    margin: 20px 20px 0 20px;
+    .gameCard {
+      display: grid;
+      grid-template-columns: 230px 230px;
+      grid-template-rows: 260px 260px 260px 260px 260px;
+      gap: 20px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    margin: 20px 20px 0 20px;
+    .container__flex {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .gameCard {
+      display: grid;
+      grid-template-columns: 230px 230px;
+      grid-template-rows: 260px 260px 260px 260px 260px;
+      gap: 20px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    margin: 20px 20px 0 20px;
+    .container__flex {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .block__btn {
+      margin-top: 7px;
+    }
+    .gameCard {
+      display: grid;
+      grid-template-columns: 230px;
+      grid-template-rows: 260px 260px 260px 260px 260px 260px;
+      gap: 20px;
+    }
   }
 }

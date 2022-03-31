@@ -12,7 +12,6 @@ export class GamesComponent implements OnInit {
   searchQuery2 = '';
   games: Game[] = [];
   isDefaultGamesVisible = true;
-  // gamesId: any[] = [];
 
   priceQuery: string = '';
   filteredGames: Game[] = [];
@@ -24,11 +23,6 @@ export class GamesComponent implements OnInit {
       .subscribe((data) => {
         this.games = data;
       });
-
-    // this.gameService.getGamesId()
-    //   .subscribe(data => {
-    //     this.gamesId = data;
-    //   });
   }
 
   addGameToLib(item: Game) {

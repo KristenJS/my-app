@@ -1,17 +1,17 @@
-  .block__btn {
-    margin-left: 5px;
-    padding: 0 10px 0 10px;
-    background: #6C69FF;
-    border: none;
-    height: 21px;
-    color: white;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 4px;
-  }
-  .block__btn:hover {
-    background-color: #4a47df;
-    cursor: pointer;
-  }
+.block__btn {
+  margin-left: 5px;
+  padding: 0 10px 0 10px;
+  background: #6C69FF;
+  border: none;
+  height: 21px;
+  color: white;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+}
+.block__btn:hover {
+  background-color: #4a47df;
+  cursor: pointer;
+}
 
 .container__flex {
   display: flex;
@@ -19,16 +19,15 @@
 }
 
 .container {
-  width: 1200px;
-  padding: 50px;
   max-width: 100%;
-  margin: 20px auto;
+  padding: 50px;
+  margin: 20px 100px 0 100px;
   background: #FFFFFF;
   .gameCard {
     display: grid;
     grid-template-columns: 250px 250px 250px;
     grid-template-rows: 280px 280px 280px;
-    gap: 30px;
+    gap: 20px;
     width: 850px;
     .gameCard__block {
       margin: 20px 0 0 20px;
@@ -65,8 +64,11 @@
       }
     } 
   }
+}
 
-  @media (max-width: 992px) {
+@media (max-width: 1300px) {
+  .container {
+    margin: 20px 20px 0 20px;
     .gameCard {
       display: grid;
       grid-template-columns: 230px 230px;
@@ -74,8 +76,34 @@
       gap: 20px;
     }
   }
+}
 
-  @media (max-width: 767px) {
+@media (max-width: 992px) {
+  .container {
+    margin: 20px 20px 0 20px;
+    .container__flex {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .gameCard {
+      display: grid;
+      grid-template-columns: 230px 230px;
+      grid-template-rows: 260px 260px 260px 260px 260px;
+      gap: 20px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    margin: 20px 20px 0 20px;
+    .container__flex {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    .block__btn {
+      margin-top: 7px;
+    }
     .gameCard {
       display: grid;
       grid-template-columns: 230px;
@@ -84,6 +112,3 @@
     }
   }
 }
-
-
-

@@ -14,10 +14,4 @@ export class GamesService {
     return games;
   }
 
-  // getGamesId(): Observable<Game[]> {
-  //   const games = of(GAMES);
-  //   return games
-  //     .pipe(map((data:any) => data.map((el:Game) => el.id)))
-  // }
-
 }
